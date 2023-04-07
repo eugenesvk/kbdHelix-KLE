@@ -26,22 +26,23 @@ for gist, v in modeGist.items():
   gist_url   	= f"{gist_url_pre}/{gist}"
   folder_name	= v['folder']
   gist_path  	= Path(f"./{folder_name}")
-  # 1 add submodules
-  # git submodule add f"{gist_url}" f"{gist_path}"
-  # 2 remove edit history junk (find a way to not exit here)
-  # if gist_path.exists():
-    # cd f"{gist_path}"
-    # pwd
-    # git rebase -i --root
-    # git push -f
-  kle_glob = glob.glob(f"{gist_path}/*Helix*modi*.json")
-  kle_name	= v['file']
-  kle_path = Path(f"./build/{kle_name_pre}{kle_name}.json")
-  for f in kle_glob:
-    print(f"copying {f} to\t {kle_path}")
-    os.makedirs(os.path.dirname(kle_path), exist_ok=True)
-    shutil.copy(f, kle_path)
-    break
+  if not True: # 1 add submodules
+    git submodule add f"{gist_url}" f"{gist_path}"
+  if not True: # 2 remove edit history junk (find a way to not exit here)
+    if gist_path.exists():
+      cd f"{gist_path}"
+      pwd
+      git rebase -i --root
+      git push -f
+  if True: # 3 copy&rename KLE config files
+    kle_glob = glob.glob(f"{gist_path}/*Helix*modi*.json")
+    kle_name	= v['file']
+    kle_path = Path(f"./build/{kle_name_pre}{kle_name}.json")
+    for f in kle_glob:
+      print(f"copying {f} to\t {kle_path}")
+      os.makedirs(os.path.dirname(kle_path), exist_ok=True)
+      shutil.copy(f, kle_path)
+      break
 
 # print(f"Updating all submodules")
 # git submodule update --init --recursive
