@@ -25,3 +25,6 @@
 [submodule "nView"]
 	path = nView
 	url = https://gist.github.com/eugenesvk/94d728fc74d61af4de9ed17ff7d8566d
+[submodule "nTemplate"]
+	path = nTemplate
+	url = https://gist.github.com/eugenesvk/393740006d033466442e89fb6fd23d96

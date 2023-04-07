@@ -16,6 +16,7 @@ modeGist = {
   '22a4426747d045cc828e0d125af3a540' : {'folder':'nWindow'    	,'file':'nWindow' },
   '1b083641d649a424a7edbf1a491aff75' : {'folder':'nMatch'     	,'file':'nMatch' },
   '94d728fc74d61af4de9ed17ff7d8566d' : {'folder':'nView'      	,'file':'nView' },
+  '393740006d033466442e89fb6fd23d96' : {'folder':'nTemplate'  	,'file':'nTemplate' },
 }
 
 gist_url_pre = 'https://gist.github.com/eugenesvk'
