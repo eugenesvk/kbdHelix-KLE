@@ -3,32 +3,44 @@
 import sys
 import os
 import shutil
+import glob
 from pathlib  import Path
 
 modeGist = {
-  '537c5fed0748cb2cf889bab3ff866667' : {'name':'m1NOR'},
-  '7a5ff7b6fb13e52ad1ae63445536ca4b' : {'name':'m2INS'},
-  'cd44f7fd307f22d52d59f74c0967faaf' : {'name':'m3SEL'},
-  '476cb89ca592befe598617a4af733910' : {'name':'nSpace'},
-  '235396cdfbd07f19f6af1e26dff1e949' : {'name':'nGoTo'},
-  'b885c21cc83ae06108b3da6728148191' : {'name':'nUnimpaired'},
-  '22a4426747d045cc828e0d125af3a540' : {'name':'nWindow'},
-  '1b083641d649a424a7edbf1a491aff75' : {'name':'nMatch'},
-  '94d728fc74d61af4de9ed17ff7d8566d' : {'name':'nView'},
+  '537c5fed0748cb2cf889bab3ff866667' : {'folder':'m1NOR'      	,'file':'m1NOR' },
+  '7a5ff7b6fb13e52ad1ae63445536ca4b' : {'folder':'m2INS'      	,'file':'m2INS' },
+  'cd44f7fd307f22d52d59f74c0967faaf' : {'folder':'m3SEL'      	,'file':'m3SEL' },
+  '476cb89ca592befe598617a4af733910' : {'folder':'nSpace'     	,'file':'nSpace' },
+  '235396cdfbd07f19f6af1e26dff1e949' : {'folder':'nGoTo'      	,'file':'nGoTo' },
+  'b885c21cc83ae06108b3da6728148191' : {'folder':'nUnimpaired'	,'file':'nUnimpaired' },
+  '22a4426747d045cc828e0d125af3a540' : {'folder':'nWindow'    	,'file':'nWindow' },
+  '1b083641d649a424a7edbf1a491aff75' : {'folder':'nMatch'     	,'file':'nMatch' },
+  '94d728fc74d61af4de9ed17ff7d8566d' : {'folder':'nView'      	,'file':'nView' },
 }
 
 gist_url_pre = 'https://gist.github.com/eugenesvk'
+kle_name_pre = 'helix-keymap-modifew-'
+target_files=["t2.json", "test.json"]
 for gist, v in modeGist.items():
   gist_url   	= f"{gist_url_pre}/{gist}"
-  folder_name	= v['name']
-  gist_path = Path(f"./{folder_name}")
-  git submodule add f"{gist_url}" f"{gist_path}"
-  if gist_path.exists():
-    cd f"{gist_path}"
-    pwd
-    git rebase -i --root
-    git push -f
-  # find a way to not exit here
+  folder_name	= v['folder']
+  gist_path  	= Path(f"./{folder_name}")
+  # 1 add submodules
+  # git submodule add f"{gist_url}" f"{gist_path}"
+  # 2 remove edit history junk (find a way to not exit here)
+  # if gist_path.exists():
+    # cd f"{gist_path}"
+    # pwd
+    # git rebase -i --root
+    # git push -f
+  kle_glob = glob.glob(f"{gist_path}/*Helix*modi*.json")
+  kle_name	= v['file']
+  kle_path = Path(f"./build/{kle_name_pre}{kle_name}.json")
+  for f in kle_glob:
+    print(f"copying {f} to\t {kle_path}")
+    os.makedirs(os.path.dirname(kle_path), exist_ok=True)
+    shutil.copy(f, kle_path)
+    break
 
 # print(f"Updating all submodules")
 # git submodule update --init --recursive
