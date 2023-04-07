@@ -1,0 +1,27 @@
+[submodule "m1NOR"]
+	path = m1NOR
+	url = https://gist.github.com/eugenesvk/537c5fed0748cb2cf889bab3ff866667
+[submodule "m2INS"]
+	path = m2INS
+	url = https://gist.github.com/eugenesvk/7a5ff7b6fb13e52ad1ae63445536ca4b
+[submodule "m3SEL"]
+	path = m3SEL
+	url = https://gist.github.com/eugenesvk/cd44f7fd307f22d52d59f74c0967faaf
+[submodule "nSpace"]
+	path = nSpace
+	url = https://gist.github.com/eugenesvk/476cb89ca592befe598617a4af733910
+[submodule "nGoTo"]
+	path = nGoTo
+	url = https://gist.github.com/eugenesvk/235396cdfbd07f19f6af1e26dff1e949
+[submodule "nUnimpaired"]
+	path = nUnimpaired
+	url = https://gist.github.com/eugenesvk/b885c21cc83ae06108b3da6728148191
+[submodule "nWindow"]
+	path = nWindow
+	url = https://gist.github.com/eugenesvk/22a4426747d045cc828e0d125af3a540
+[submodule "nMatch"]
+	path = nMatch
+	url = https://gist.github.com/eugenesvk/1b083641d649a424a7edbf1a491aff75
+[submodule "nView"]
+	path = nView
+	url = https://gist.github.com/eugenesvk/94d728fc74d61af4de9ed17ff7d8566d
