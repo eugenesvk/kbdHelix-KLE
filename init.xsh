@@ -53,5 +53,7 @@ for gist, v in modeGist.items():
     with open(f'{kle_path}','w') as file:
       file.write(f'[InternetShortcut]\nURL={kle_url}')
 
-# print(f"Updating all submodules")
+# print(f"Initializing")
 # git submodule update --init --recursive
+# print(f"Updating all submodules")
+# git submodule update --recursive --remote
