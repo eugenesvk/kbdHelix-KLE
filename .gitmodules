@@ -28,3 +28,9 @@
 [submodule "nTemplate"]
 	path = nTemplate
 	url = https://gist.github.com/eugenesvk/393740006d033466442e89fb6fd23d96
+[submodule "nLabelMod"]
+	path = nLabelMod
+	url = https://gist.github.com/eugenesvk/99fc2826e486cb1fac7ab574e43c17d2
+[submodule "nLabelKey"]
+	path = nLabelKey
+	url = https://gist.github.com/eugenesvk/221315196dc4c3aba34b3f4412708746

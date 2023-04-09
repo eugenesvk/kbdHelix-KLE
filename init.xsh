@@ -17,6 +17,8 @@ modeGist = {
   '1b083641d649a424a7edbf1a491aff75' : {'folder':'nMatch'     	,'file':'nMatch' },
   '94d728fc74d61af4de9ed17ff7d8566d' : {'folder':'nView'      	,'file':'nView' },
   '393740006d033466442e89fb6fd23d96' : {'folder':'nTemplate'  	,'file':'nTemplate' },
+  '99fc2826e486cb1fac7ab574e43c17d2' : {'folder':'nLabelMod'  	,'file':'nLabelMod' },
+  '221315196dc4c3aba34b3f4412708746' : {'folder':'nLabelKey'  	,'file':'nLabelKey' },
 }
 
 gist_url_pre	= 'https://gist.github.com/eugenesvk'
